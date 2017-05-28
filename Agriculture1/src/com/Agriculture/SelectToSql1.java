@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 public class SelectToSql1 {
-	private String url="jdbc:mysql://localhost:3306/word?useUnicode=true&characterEncoding=gbk";
+	private String url="jdbc:mysql://localhost:3306/word";
 	private String driver="com.mysql.jdbc.Driver";
 	private String user="root";
 	private String  pwd="961215";

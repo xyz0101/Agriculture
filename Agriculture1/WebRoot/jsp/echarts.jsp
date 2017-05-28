@@ -73,8 +73,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                series : [
         {
             type:'force',
-           //		edgeLength: 10, //默认距离
-             //   repulsion: 10, //斥力
+           		//edgeLength: 10, //默认距离
+              //  repulsion: 10, //斥力
             ribbonType: true,
             categories : [
                 
@@ -171,7 +171,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								$("#span3").html(result[0]);	
 							},
 							error:function(data){
-							alert(shibai);
+						//	alert('shibai');
 							}
 							});	
 							$(".message").fadeIn();

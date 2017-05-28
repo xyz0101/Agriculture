@@ -7,7 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 public class SelectToSql {
-	private String url="jdbc:mysql://localhost:3306/word?useUnicode=true&characterEncoding=gbk";
+	private String url="jdbc:mysql://localhost:3306/word";
 	private String driver="com.mysql.jdbc.Driver";
 	private String user="root";
 	private String  pwd="961215";
@@ -51,15 +51,11 @@ public class SelectToSql {
 		 try {
 			while(rs.next()){
 				 String subj=rs.getString("Subj");
-				 subj=subj.replaceAll("Uv::http://nyxc#", "").replaceAll(":","");
+				// subj=subj.replaceAll("Uv::http://nyxc#", "").replaceAll(":","");
 				 String prop=rs.getString("Prop");
-				 prop=prop.replaceAll("Uv::http://nyxc#", "").replaceAll(":","");
+				// prop=prop.replaceAll("Uv::http://nyxc#", "").replaceAll(":","");
 				 String obj=rs.getString("Obj");
-				obj= obj.replaceAll("Lv:0::", "").replaceAll(":","");
-//				 System.out.println(subj);
-//				 System.out.println(prop);
-//				 System.out.println(obj);
-				// list1.add(subj);
+		
 				 list1.add(obj);
 			 }
 		} catch (SQLException e) {
@@ -76,7 +72,7 @@ public class SelectToSql {
 	}
 	public static void main(String[] args) {
 		SelectToSql jg= new SelectToSql();
-		 List list=jg.findBySubj("止泻药【74F】");
+		 List list=jg.findBySubj("中国");
 		 System.out.println(list);
 		 System.out.println("次数：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：：："+jg.x);
 	}
